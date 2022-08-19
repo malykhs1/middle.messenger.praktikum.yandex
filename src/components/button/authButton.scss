@@ -11,11 +11,10 @@
   max-width: 358px;
   min-height: 50px;
   width: 83%;
-}
-
-.button_auth:hover {
-  cursor: pointer;
-  opacity: 0.8;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 

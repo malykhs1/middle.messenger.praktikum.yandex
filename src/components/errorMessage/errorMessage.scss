@@ -1,11 +1,9 @@
 .error-not-found__title {
-  font-family: Inter;
   font-size: 40px;
   font-weight: 500;
   line-height: 40px;
   text-align: center;
-  margin: 0;
-  margin-top: 246px;
+  margin: 246px 0 0;
 }
 
 @media screen and (max-width: 850px) {
@@ -24,10 +22,7 @@
 }
 
 .error-not-found__subtitle {
-  margin: 0;
-  margin-top: 5px;
-  margin-bottom: 69px;
-  font-family: Inter;
+  margin: 20px 0 69px;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
@@ -67,9 +62,8 @@
   font-weight: 400;
   line-height: 17px;
   text-align: center;
-}
-
-.error-not-found__link:hover {
-  opacity: 0.8;
-  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
