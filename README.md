@@ -10,6 +10,7 @@
 ### Direction
          - you can find projet's repo here: https://github.com/i-c-winner/middle.messenger.praktikum.yandex/tree/sprint_1
          - deploy version works with Netlify: https://dainty-cupcake-805e4e.netlify.app/
+         - you can find Figma design in UI folder 
 ### Cloning
          - to deploy the project locally, you need to clone repo from github and install dependencies
          - to run the prohect via Express, you need to use npm run start from the project root
