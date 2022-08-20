@@ -7,6 +7,10 @@
 
 ## Deployment
 
+### Netlify and Figma 
+         - https://app.netlify.com/sites/dainty-cupcake-805e4e/overview
+         - https://www.figma.com/file/xc2rNFytcIZrrVekrpYvZS/malykh
+
 ### Direction
          - you can find projet's repo here: https://github.com/i-c-winner/middle.messenger.praktikum.yandex/tree/sprint_1
          - deploy version works with Netlify: https://dainty-cupcake-805e4e.netlify.app/
