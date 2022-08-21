@@ -8,7 +8,7 @@
 ## Deployment
 
 ### Netlify and Figma 
-         - https://app.netlify.com/sites/dainty-cupcake-805e4e/overview
+         - https://dainty-cupcake-805e4e.netlify.app/
          - https://www.figma.com/file/xc2rNFytcIZrrVekrpYvZS/malykh
 
 ### Direction
