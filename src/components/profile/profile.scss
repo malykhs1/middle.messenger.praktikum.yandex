@@ -1,3 +1,10 @@
+$color-link: #3369F3;
+$color-input-data: #999999;
+$color-profile-label: #1E1E1E;
+$color-button-exit: #ee3465;
+$avatar-background-color: #EFEFEF;
+
+
 .profile__container {
   margin: 70px auto auto;
   max-width: 396px;
@@ -24,7 +31,7 @@
   width: 160px;
   height: 160px;
   margin: auto;
-  background: #EFEFEF;
+  background: $avatar-background-color;
   border-radius: 50%;
 }
 
@@ -97,7 +104,7 @@
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  color: rgba(238, 52, 101, 1);
+  color: $color-button-exit;
   text-align: left;
 
   &:hover {
@@ -132,7 +139,6 @@
 }
 
 .profile__button {
-  background: rgba(43, 224, 128, 1);
   color: rgba(255, 255, 255, 1);
   border: none;
   border-radius: 2px;
@@ -169,7 +175,7 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 13px;
-  color: #1E1E1E;
+  color: $color-profile-label;
 }
 
 .profile__input-data {
@@ -177,7 +183,7 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 13px;
-  color: #999999;
+  color: $color-input-data;
 }
 
 .profile__email-container {
@@ -228,7 +234,7 @@
   margin-top: 10px;
   border: 0;
   text-decoration: none;
-  color: #3369F3;
+  color: $color-link;
   border-bottom: 1px solid #aaa3;
   width: 100%;
   text-align: left;

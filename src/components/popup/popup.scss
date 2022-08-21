@@ -1,10 +1,13 @@
+$color-link: #3369F3;
+$color-input__title: #999999;
+
 .popup__container {
   display: flex;
   flex-direction: column;
   margin: 60px auto auto;
   max-width: 430px;
   min-height: 330px;
-  box-shadow:6px 12px 25px 9px rgb(0 0 0 / 25%);
+  box-shadow: 6px 12px 25px 9px rgb(0 0 0 / 25%);
   border-radius: 10px;
 }
 
@@ -33,9 +36,10 @@
 }
 
 .popup__link {
-  color: #3369F3;
+  color: $color-link;
   text-decoration: none;
   margin: auto auto 30px;
+
   &:hover {
     cursor: pointer;
     opacity: 0.8;
@@ -43,7 +47,7 @@
 }
 
 .popup__input-title {
-  color: #999999;
+  color: $color-input__title;
   font-size: 9px;
   font-weight: 500;
   line-height: 9px;

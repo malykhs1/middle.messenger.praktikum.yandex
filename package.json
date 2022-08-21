@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.  ### ВАЖНО: pull request должен называться “Sprint i” (i — номер спринта).",
   "dependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "express": "^4.18.1",
-    "handlebars": "^4.7.7",
-    "parcel": "^2.7.0"
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "express": "4.18.1",
+    "handlebars": "4.7.7",
+    "parcel": "2.7.0",
+    "rimraf": "3.0.2"
   },
   "scripts": {
-    "dev": "rm -rf .parcel-cache/* && parcel src/index.hbs --open --port 3000",
-    "build": "rm -rf dist/* && parcel build src/index.hbs"
+    "dev": "rimraf .parcel-cache/* && parcel src/index.hbs --open --port 3000",
+    "build": "rimraf dist/* && parcel build src/index.hbs",
+    "start": "npm run build && node server.js"
   },
-  "engine" : {
-    "node": "^8.17.0"
+  "engine": {
+    "node": "8.17.0"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,6 @@
   },
   "homepage": "https://github.com/malykhs1/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0"
+    "@parcel/transformer-sass": "2.7.0"
   }
 }
