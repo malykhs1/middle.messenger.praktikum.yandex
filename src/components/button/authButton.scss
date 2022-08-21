@@ -1,0 +1,22 @@
+$background: #3369F3;
+$color: #FFFFFF;
+
+.button_auth {
+  background: $background;
+  border: none;
+  border-radius: 8px;
+  color: $color;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  margin-left: 36px;
+  margin-top: 37px;
+  max-width: 358px;
+  min-height: 50px;
+  width: 83%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
