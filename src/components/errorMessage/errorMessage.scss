@@ -1,3 +1,6 @@
+$background: #3369F3;
+$color: #3369F3;;
+
 .error-not-found__title {
   font-size: 40px;
   font-weight: 500;
@@ -57,7 +60,7 @@
   background: none;
   text-decoration: none;
   border: none;
-  color: #3369F3;
+  color: $color;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;

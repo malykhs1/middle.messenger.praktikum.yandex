@@ -1,3 +1,7 @@
+$color-input: #black;
+$color-input__title: #999999;
+$color-link: #3369F3;
+
 .login__container {
   display: flex;
   flex-direction: column;
@@ -20,7 +24,7 @@
 .login__input {
   border: 0;
   border-bottom: 1px solid #3369F3;
-  color: black;
+  color: $color-input;
   font-size: 13px;
   font-weight: 500;
   line-height: 13px;
@@ -33,7 +37,7 @@
 }
 
 .login__link {
-  color: #3369F3;
+  color: $color-link;
   text-decoration: none;
   margin: auto auto 30px;
 }
@@ -44,11 +48,10 @@
 }
 
 .login__input-title {
-  color: #999999;
+  color: $color-input__title;
   font-size: 9px;
   font-weight: 500;
   line-height: 9px;
   margin-top: 16px;
   margin-left: 30px;
 }
-

@@ -15,7 +15,7 @@
     "start": "npm run build && node server.js"
   },
   "engine": {
-    "node": "^8.17.0"
+    "node": "8.17.0"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/malykhs1/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0"
+    "@parcel/transformer-sass": "2.7.0"
   }
 }
