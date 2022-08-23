@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/malykhs1/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "2.7.0"
+    "@parcel/transformer-sass": "2.7.0",
+    "ts-node": "^10.9.1"
   }
 }
