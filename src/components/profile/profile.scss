@@ -134,7 +134,7 @@ $avatar-background-color: #EFEFEF;
   font-weight: 400;
   line-height: 13px;
   color: black;
-  text-align: right;
+  text-align: left;
   outline: none;
 }
 
@@ -165,6 +165,7 @@ $avatar-background-color: #EFEFEF;
 
 .profile__input-container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   border-bottom: 1px solid rgba(170, 170, 170, 0.2);
   padding: 10px 0;

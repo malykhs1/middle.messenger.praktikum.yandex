@@ -1,6 +1,3 @@
-$color-input: #black;
-$color-input__title: #999999;
-$color-link: #3369F3;
 
 .login__container {
   display: flex;
@@ -19,39 +16,4 @@ $color-link: #3369F3;
   font-weight: 900;
   line-height: 29px;
   text-align: center;
-}
-
-.login__input {
-  border: 0;
-  border-bottom: 1px solid #3369F3;
-  color: $color-input;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 13px;
-  text-align: left;
-  margin-left: 30px;
-  margin-top: 7px;
-  width: 358px;
-  padding-bottom: 7px;
-  outline-style: none;
-}
-
-.login__link {
-  color: $color-link;
-  text-decoration: none;
-  margin: auto auto 30px;
-}
-
-.login__link:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.login__input-title {
-  color: $color-input__title;
-  font-size: 9px;
-  font-weight: 500;
-  line-height: 9px;
-  margin-top: 16px;
-  margin-left: 30px;
 }

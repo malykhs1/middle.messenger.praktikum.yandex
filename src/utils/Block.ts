@@ -15,7 +15,7 @@ class Block {
     public children: Record<string, Block>;
     private eventBus: () => EventBus;
     private _element: HTMLElement | null = null;
-    private _meta: { tagName: string; props: any; };d
+    private _meta: { tagName: string; props: any; };
 
     /** JSDoc
      * @param {string} tagName
@@ -74,8 +74,8 @@ class Block {
     }
 
     _createResources() {
-        const { tagName } = this._meta;
-        this._element = this._createDocumentElement(tagName);
+        // const { tagName } = this._meta;
+        // this._element = this._createDocumentElement(tagName);
     }
 
     private _init() {
@@ -118,7 +118,6 @@ class Block {
         Object.assign(this.props, nextProps);
     };
 
-    // @ts-ignore
     get element() {
         return this._element;
     }
@@ -126,9 +125,11 @@ class Block {
     private _render() {
         const fragment = this.render();
 
-        this._element!.innerHTML = '';
+        const newElement = fragment.firstElementChild as HTMLElement;
 
-        this._element!.append(fragment);
+        this._element?.replaceWith(newElement);
+
+        this._element = newElement;
 
         this._addEvents();
     }
@@ -137,7 +138,7 @@ class Block {
         const contextAndStubs = { ...context };
 
         Object.entries(this.children).forEach(([name, component]) => {
-            contextAndStubs[name] = `<div data-id="${component.id}" />`;
+            contextAndStubs[name] = `<div data-id="${component.id}"> </div>`;
         });
 
         const html = template(contextAndStubs);

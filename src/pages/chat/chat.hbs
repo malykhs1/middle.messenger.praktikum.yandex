@@ -1,8 +1,74 @@
-<html>
-<head>
-    <link rel="stylesheet" href="../../style.scss">
-</head>
-<body>
-{{> errorMessage error-number="404" error-text="I will create chat page in next sprint!" nav-text="Go back"}}
-</body>
-</html>
+<!--<div class="chat__container">-->
+<!--    <div class="chat__header">-->
+<!--        <div class="chat__name">-->
+<!--            Вадим-->
+<!--        </div>-->
+<!--        <div class="chat__menu"></div>-->
+<!--    </div>-->
+<!--    <div class="chat__conversation">-->
+<!--        <div class="chat__conversation">-->
+<!--            <div class="chat__message">-->
+<!--                Шалом, брат. Как дела?-->
+<!--            </div>-->
+<!--            <div class="chat__friend-message">-->
+<!--                Hi! I'm fine. And you?-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="chat__input-area">-->
+<!--            <input placeholder="text message here" class="chat__input">-->
+<!--            <button class="chat__button-send-message"></button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<section class="chat">
+    <div class="chat__container">
+        <div class="chat__container-left">
+            <a href="#" class="chat__profile-link">Profile</a>
+            <input class="chat__search-conversation" placeholder="Search">
+            <div class="chat__conversation-container">
+                <div class="chat__conversation-details">
+                    <img class="chat__avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JFW_9DcxIBCuIBZB5LpAsY5XyJ6lQ9uBlW3Qy2KRlM6o2jj_D0YsDb9ubg&s" class="chat__avatar"/>
+                    <p class="chat__name">Вадим</p>
+                    <p class="chat__text">Привет, как дела!</p>
+                    <p class="chat__text-time">10:00</p>
+                    <p class="chat__nbr-of-new-messages"></p>
+                </div>
+                <div class="chat__conversation-details">
+                    <div class="avatar__container"><img class="chat__avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JFW_9DcxIBCuIBZB5LpAsY5XyJ6lQ9uBlW3Qy2KRlM6o2jj_D0YsDb9ubg&s" class="chat__avatar"/></div>
+                    <p class="chat__name">Вадим</p>
+                    <p class="chat__text">Привет, как дела!</p>
+                    <p class="chat__text-time">10:00</p>
+                    <p class="chat__nbr-of-new-messages"></p>
+                </div>
+                <div class="chat__conversation-details">
+                    <img class="chat__avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JFW_9DcxIBCuIBZB5LpAsY5XyJ6lQ9uBlW3Qy2KRlM6o2jj_D0YsDb9ubg&s" class="chat__avatar"/>
+                    <p class="chat__name">Вадим</p>
+                    <p class="chat__text">Привет, как дела!</p>
+                    <p class="chat__text-time">10:00</p>
+                    <p class="chat__nbr-of-new-messages"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat__container-right">
+            <div class="chat__header_right">
+                <div class="chat__buddy-detail">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JFW_9DcxIBCuIBZB5LpAsY5XyJ6lQ9uBlW3Qy2KRlM6o2jj_D0YsDb9ubg&s" class="chat__buddy-avatar"/>
+                    <p class="chat__buddy-name">Сергей</p>
+                </div>
+                <div class="chat-conversation-settings">
+                    <img/>
+                </div>
+            </div>
+            <div class="chat__conversation-block">
+                <p class="chat__message"></p>
+            </div>
+            <div chat__message-send-block>
+                <img src="./src/images/add-files.png" class="chat__add-items" />
+                <input class="chat__input-send-message">
+                <img class="chat__button-send-message" />
+            </div>
+        </div>
+    </div>
+</section>
