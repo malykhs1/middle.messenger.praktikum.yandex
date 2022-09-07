@@ -38,21 +38,78 @@ export class RegisterPage extends Block {
     }
 
     onBlur(e: any) {
-        checkLogin()
-        checkPassword();
-        checkEmail();
-        checkName();
-        checkPhone();
-        checkPasswordDouble()
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      const inputLogin = document.getElementById("login") as HTMLInputElement;
+      const errorLogin = document.getElementById("loginError") as HTMLElement;
+
+      const inputName = document.getElementById("first_name") as HTMLInputElement;
+      const errorName = document.getElementById("nameError") as HTMLElement;
+
+      const inputPasswordDouble = document.getElementById("password-again") as HTMLInputElement;
+      const errorPasswordAgain = document.getElementById("passwordAgainError") as HTMLElement;
+
+      const inputPhone = document.getElementById("phone") as HTMLInputElement;
+      const errorPhone = document.getElementById("phoneError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+      if (e.target === inputPassword) {
+        checkPassword(inputPassword, errorPassword);
+      }
+      if (e.target === inputLogin) {
+        checkLogin(inputLogin, errorLogin)
+      }
+      if (e.target === inputName) {
+        checkName(inputName, errorName);
+      }
+      if (e.target === inputPhone) {
+        checkPhone(inputPhone, errorPhone);
+      }
+      if (e.target === inputPasswordDouble) {
+        checkPasswordDouble(inputPasswordDouble, errorPasswordAgain);
+      }
     }
 
     onFocus(e: any) {
-        checkLogin()
-        checkPassword();
-        checkEmail();
-        checkName();
-        checkPhone();
-        checkPasswordDouble()
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      const inputLogin = document.getElementById("login") as HTMLInputElement;
+      const errorLogin = document.getElementById("loginError") as HTMLElement;
+
+      const inputName = document.getElementById("first_name") as HTMLInputElement;
+      const errorName = document.getElementById("nameError") as HTMLElement;
+
+      const inputPasswordDouble = document.getElementById("password-again") as HTMLInputElement;
+      const errorPasswordAgain = document.getElementById("passwordAgainError") as HTMLElement;
+
+      const inputPhone = document.getElementById("phone") as HTMLInputElement;
+      const errorPhone = document.getElementById("phoneError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+      if (e.target === inputPassword) {
+        checkPassword(inputPassword, errorPassword);
+      }
+      if (e.target === inputLogin) {
+        checkLogin(inputLogin, errorLogin)
+      }
+      if (e.target === inputPhone) {
+        checkPhone(inputPhone, errorPhone);
+      }
+      if (e.target === inputPasswordDouble) {
+        checkPasswordDouble(inputPasswordDouble, errorPasswordAgain);
+      }
     }
 
 

@@ -6,7 +6,6 @@ import { authLink } from "../../components/authLinkTemplate";
 
 import {checkPassword, checkEmail} from "../../utils/validation"
 
-
 export class LoginPage extends Block {
     constructor(props: {
         title: string,
@@ -17,9 +16,6 @@ export class LoginPage extends Block {
     }) {
         super('div', {
             title: "Sign in",
-            re:  /[^a-zA-ZА-Яа-я0-9]+/g,
-            // emailRegexp: /^[a-z]+[a-z-]+\@[a-z]+\.[a-z]+$/,
-            // passwordRegexp: /(?<!\S)(?=\S{8,40}(?!\S))\S*(\d\S*[A-ZА-ЯЁ]|[A-ZА-ЯЁ]\S*\d)\S*/,
         });
     }
 
@@ -36,43 +32,34 @@ export class LoginPage extends Block {
     }
 
     onBlur(e: any) {
-        checkPassword();
-        checkEmail();
-        // this.checkEmail(e);
-        // this.checkPassword(e)
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+      if (e.target === inputPassword) {
+        checkPassword(inputPassword, errorPassword);
+      }
     }
 
     onFocus(e: any) {
-        checkPassword();
-        checkEmail();
-        // this.checkEmail(e);
-        // this.checkPassword(e)
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+      if (e.target === inputPassword) {
+        checkPassword(inputPassword, errorPassword);
+      }
     }
-
-
-    // checkPassword(e: any) {
-    //     const inputPassword = document.getElementById("password") as  HTMLInputElement;
-    //     const errorPassword = document.getElementById("passwordError") as HTMLElement;
-    //     if (!inputPassword.value.match(this.props.passwordRegexp)) {
-    //         inputPassword.classList.add("login__input_error");
-    //         errorPassword.textContent = "Пароль должен состоять от 8 до 40 символов,одной заглавной буквы и цифры."
-    //     } else {
-    //         inputPassword.classList.remove("login__input_error");
-    //         errorPassword.textContent = "";
-    //     }
-    // }
-    //
-    // checkEmail(e: any) {
-    //     const inputEmail = document.getElementById("email") as HTMLInputElement;
-    //     const errorEmail = document.getElementById("emailError") as HTMLElement;
-    //     if (!inputEmail.value.match(this.props.emailRegexp)) {
-    //         inputEmail.classList.add("login__input_error");
-    //         errorEmail.textContent = "Логин должен состоять из латиницы, может включать цифры и спецсимволы"
-    //     } else {
-    //         inputEmail.classList.remove("login__input_error");
-    //         errorEmail.textContent = "";
-    //     }
-    // }
 
     init() {
         this.children.button = new Button({

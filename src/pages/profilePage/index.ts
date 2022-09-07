@@ -1,26 +1,26 @@
 import Block from '../../utils/Block';
 import template from './profile.hbs';
-import  { InputProfile } from "../../components/profileData";
+import  { ItemProfile } from "../../components/profileDataItemsTemplate";
 
 export class ProfilePage extends Block {
 
     init() {
-        this.children.mailInput = new InputProfile({
+        this.children.mailInput = new ItemProfile({
             label: 'Mail',
         });
-        this.children.loginInput = new InputProfile({
+        this.children.loginInput = new ItemProfile({
             label: 'Login',
         });
-        this.children.nameInput = new InputProfile({
+        this.children.nameInput = new ItemProfile({
             label: 'Name',
         });
-        this.children.surnameInput = new InputProfile({
+        this.children.surnameInput = new ItemProfile({
             label: 'Surname',
         });
-        this.children.nicknameInput = new InputProfile({
+        this.children.nicknameInput = new ItemProfile({
             label: 'Nickname',
         });
-        this.children.phoneInput = new InputProfile({
+        this.children.phoneInput = new ItemProfile({
             label: 'Phone number',
         });
     }

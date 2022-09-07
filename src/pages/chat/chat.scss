@@ -1,12 +1,13 @@
 .chat__container {
+  width: 100%;
   min-height: 100%;
   display: grid;
   background: #FBFBFB;
   grid-template-columns: 22% 78%;
 }
 
-.chat__container-left {max-width: 310px;
-background-color: blanchedalmond;
+.chat__container-left {
+  max-width: 310px;
 }
 
 .chat__profile-link {
@@ -43,12 +44,12 @@ background-color: blanchedalmond;
 
 .chat__conversation-details {
   margin: 12px 10px;
-  border-bottom-color: rgba(234, 234, 234, 1);;
-  border-bottom: 1px solid red;
-  border-top: 1px solid red;
+  border-bottom-color: rgba(234, 234, 234, 1);
+  border-bottom: 1px solid rgba(234, 234, 234, 1);
+  border-top: 1px solid rgba(234, 234, 234, 1);
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 30% 70%;
 }
 .chat__avatar {
   height: 47px;
@@ -89,6 +90,12 @@ background-color: blanchedalmond;
   grid-row-end: 1;
   grid-column-start: 3;
   grid-column-end: 3;
+  font-family: Inter;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: right;
 }
 
 .chat__buddy-avatar {
@@ -109,4 +116,47 @@ background-color: blanchedalmond;
 
 .chat__buddy-name {
   justify-content: center;
+}
+
+.chat__container-message {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 20px 10px 0px;
+}
+
+.chat__container-message_darker {
+  background: rgba(228, 237, 253, 1);
+}
+
+.chat__time-right {
+  color: #aaa;
+}
+
+.chat__time-left {
+  color: #999;
+}
+
+.chat__input-send-message {
+  background: rgba(239, 239, 239, 1);
+  border: 0;
+  min-width: 90%;
+  border-radius: 5px;
+  margin: 10px 20px 10px 0px;
+  padding: 10px;
+}
+
+.chat__button-send-message {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: #FBFBFB;
+  background-image: url("./images/send-text.svg");
+}
+
+.chat__message-send-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

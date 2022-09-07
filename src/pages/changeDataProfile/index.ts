@@ -2,8 +2,15 @@ import Block from '../../utils/Block';
 import template from './changeDatProfile.hbs';
 import {Button} from "../../components/buttonSubmitFormsTemplate";
 import {profileInput} from "../../components/profileInputTemplate";
-import {inputProfileError} from "../../components/profileInputError";
-import { checkPassword, checkEmail,  checkPhone, checkName, checkLogin, checkNickname, checkSurname} from "../../utils/validation"; // список экспортируемых переменных
+import {inputProfileError} from "../../components/profileInputErrorTemplate";
+import {
+  checkEmail,
+  checkPhone,
+  checkName,
+  checkLogin,
+  checkNickname,
+  checkSurname,
+} from "../../utils/validation"; // список экспортируемых переменных
 
 
 
@@ -26,21 +33,92 @@ export class ChangeDataProfilePage extends Block {
     }
 
     onBlur(e: any) {
-        checkLogin();
-        checkEmail();
-        checkName();
-        checkPhone();
-        checkNickname();
-        checkSurname();
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const inputLogin = document.getElementById("login") as HTMLInputElement;
+      const errorLogin = document.getElementById("loginError") as HTMLElement;
+
+      const inputName = document.getElementById("first_name") as HTMLInputElement;
+      const errorName = document.getElementById("nameError") as HTMLElement;
+
+      const inputPhone = document.getElementById("phone") as HTMLInputElement;
+      const errorPhone = document.getElementById("phoneError") as HTMLElement;
+
+      const inputNickname = document.getElementById("nick_name") as HTMLInputElement;
+      const errorNickname = document.getElementById("nickNameError") as HTMLElement;
+
+      const inputSurname = document.getElementById("second_name") as HTMLInputElement;
+      const errorSurname = document.getElementById("surnameError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+
+      if (e.target === inputLogin) {
+        checkLogin(inputLogin, errorLogin)
+      }
+      if (e.target === inputName) {
+        checkName(inputName, errorName);
+      }
+      if (e.target === inputPhone) {
+        checkPhone(inputPhone, errorPhone);
+      }
+
+      if (e.target === inputNickname) {
+        checkNickname(inputNickname, errorNickname);
+      }
+
+      if (e.target === inputSurname) {
+        checkSurname(inputSurname, errorSurname);
+      }
     }
 
     onFocus(e: any) {
-        checkLogin();
-        checkEmail();
-        checkName();
-        checkPhone();
-        checkNickname();
-        checkSurname();
+      const errorPassword = document.getElementById("passwordError") as HTMLElement;
+      const errorEmail = document.getElementById("emailError") as HTMLElement;
+
+      const inputEmail = document.getElementById("email") as HTMLInputElement;
+      const inputPassword = document.getElementById("password") as  HTMLInputElement;
+
+      const inputLogin = document.getElementById("login") as HTMLInputElement;
+      const errorLogin = document.getElementById("loginError") as HTMLElement;
+
+      const inputName = document.getElementById("first_name") as HTMLInputElement;
+      const errorName = document.getElementById("nameError") as HTMLElement;
+
+      const inputPhone = document.getElementById("phone") as HTMLInputElement;
+      const errorPhone = document.getElementById("phoneError") as HTMLElement;
+
+      const inputNickname = document.getElementById("nick_name") as HTMLInputElement;
+      const errorNickname = document.getElementById("nickNameError") as HTMLElement;
+
+      const inputSurname = document.getElementById("second_name") as HTMLInputElement;
+      const errorSurname = document.getElementById("surnameError") as HTMLElement;
+
+      if (e.target === inputEmail) {
+        checkEmail(inputEmail, errorEmail);
+      }
+
+      if (e.target === inputLogin) {
+        checkLogin(inputLogin, errorLogin)
+      }
+      if (e.target === inputName) {
+        checkName(inputName, errorName);
+      }
+      if (e.target === inputPhone) {
+        checkPhone(inputPhone, errorPhone);
+      }
+      if (e.target === inputNickname) {
+        checkNickname(inputNickname, errorNickname);
+      }
+
+      if (e.target === inputSurname) {
+        checkSurname(inputSurname, errorSurname);
+      }
     }
 
     init() {

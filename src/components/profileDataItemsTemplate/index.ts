@@ -5,7 +5,7 @@ interface inputProfileProps {
     label: string;
 }
 
-export class InputProfile extends Block {
+export class ItemProfile extends Block {
     constructor(props: inputProfileProps) {
         super('input', props);
     }

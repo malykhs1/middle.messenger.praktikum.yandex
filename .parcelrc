@@ -1,6 +1,7 @@
 {
 "extends": "@parcel/config-default",
 "transformers": {
-    "*.hbs": ["@anikin/parcel-transformer-handlebars-precompile"],
+    "jsx:*.svg": ["@parcel/transformer-svg-react"],
+     "*.hbs": ["@anikin/parcel-transformer-handlebars-precompile"],
   }
 }

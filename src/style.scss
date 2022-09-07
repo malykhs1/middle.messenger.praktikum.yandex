@@ -1,12 +1,13 @@
 @import "vendor/normalize.css";
 @import "vendor/fonts.css";
-@import "components/login/loginTemplate";
 @import "components/buttonSubmitFormsTemplate/authButton";
 @import "components/inputAuthTemplate/inputAuth";
-@import "components/profile/profile";
 @import "components/popupTemplate/popup";
 @import "components/errorMessageTemplate/errorMessage";
-@import "components/profileInputError/profileInputError";
+@import "components/profileInputErrorTemplate/profileInputError";
 @import "components/authLinkTemplate/authLink";
+@import "components/profileInputTemplate/profileInput";
 @import "pages/chat/chat";
+@import "pages/loginPage/login";
+@import "pages/profilePage/profile";
 
