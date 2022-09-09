@@ -1,13 +1,12 @@
-import Block from '../../utils/Block';
-import template from './chat.hbs';
-import {chatMessage} from "../../components/chatMessageTemplate";
+import Block from "../../utils/Block";
+import template from "./chat.hbs";
+import { chatMessage } from "../../components/chatMessageTemplate";
 
 export class ChatPage extends Block {
-
   init() {
     this.children.chatMe1 = new chatMessage({
       classItem: "chat__container-message",
-      textMessage:"Hello. How are you today?",
+      textMessage: "Hello. How are you today?",
       messageTime: "11:01",
     });
 
@@ -30,7 +29,7 @@ export class ChatPage extends Block {
     });
   }
 
-    render() {
-        return this.compile(template, this.props);
-    }
+  render() {
+    return this.compile(template, this.props);
+  }
 }

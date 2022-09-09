@@ -1,19 +1,17 @@
-import Block from '../../utils/Block';
-import template from './button.hbs';
-
-interface ButtonProps {
-    label: string;
-    events: {
-        click: () => void;
-    };
-}
+import Block from "../../utils/Block";
+import template from "./button.hbs";
 
 export class Button extends Block {
-    constructor(props: { label: string; events: { click: (e: any) => void } }) {
-        super('button', props);
-    }
+  constructor(props: {
+    labelButton: string;
+    events: {
+      click: (e: SubmitEvent) => void;
+    };
+  }) {
+    super("button", props);
+  }
 
-    render() {
-        return this.compile(template, this.props);
-    }
+  render() {
+    return this.compile(template, this.props);
+  }
 }
