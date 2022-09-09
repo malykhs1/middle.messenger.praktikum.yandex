@@ -3,7 +3,9 @@
 ## Author
       - Alex Malykh
 ## Description
-     - Sprint №1
+     - Add TypeScript
+     - Add linter
+     - Add Components
 
 ## Deployment
 
