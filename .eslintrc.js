@@ -7,6 +7,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    "prettier",
   ],
   rules: {
     'no-underscore-dangle': ['off', { allow: ['_id'] }],

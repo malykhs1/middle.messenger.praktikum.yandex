@@ -1,16 +1,17 @@
-import Block from '../../utils/Block';
-import template from './inputProfile.hbs';
+import Block from "../../utils/Block";
+import template from "./inputProfile.hbs";
 
 interface inputProfileProps {
-    label: string;
+  labelProfile: string;
+  dataProfile: string;
 }
 
 export class ItemProfile extends Block {
-    constructor(props: inputProfileProps) {
-        super('input', props);
-    }
+  constructor(props: inputProfileProps) {
+    super("input", props);
+  }
 
-    render() {
-        return this.compile(template, this.props);
-    }
+  render() {
+    return this.compile(template, this.props);
+  }
 }

@@ -1,12 +1,9 @@
-$color-link: #3369F3;
-
 .login__link {
-  color: $color-link;
+  color: #3369f3;
   text-decoration: none;
   margin: auto auto 30px;
-}
-
-.login__link:hover {
-  cursor: pointer;
-  opacity: 0.8;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
