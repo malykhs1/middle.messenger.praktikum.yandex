@@ -21,7 +21,7 @@ export class LoginPage extends Block {
 
   onSubmit(e: Event) {
     e.preventDefault();
-    console.log(e)
+    console.log(e);
     const formElement = document.getElementsByTagName("input");
     const formData: { [index: string]: any } = {};
     for (let element of formElement) {
@@ -41,7 +41,9 @@ export class LoginPage extends Block {
     const errorPassword = document.getElementById(
       "passwordError"
     ) as HTMLParagraphElement;
-    const errorEmail = document.getElementById("emailError") as HTMLParagraphElement;
+    const errorEmail = document.getElementById(
+      "emailError"
+    ) as HTMLParagraphElement;
 
     if (e.target === inputEmail) {
       checkEmail(inputEmail, errorEmail);
@@ -60,7 +62,9 @@ export class LoginPage extends Block {
     const errorPassword = document.getElementById(
       "passwordError"
     ) as HTMLParagraphElement;
-    const errorEmail = document.getElementById("emailError") as HTMLParagraphElement;
+    const errorEmail = document.getElementById(
+      "emailError"
+    ) as HTMLParagraphElement;
 
     if (e.target === inputEmail) {
       checkEmail(inputEmail, errorEmail);
