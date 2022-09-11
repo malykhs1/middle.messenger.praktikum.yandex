@@ -13,18 +13,18 @@ import {
   checkLogin,
 } from "../../utils/validation";
 
-export class RegisterPage extends Block {
-  constructor(props: {
-    title: string;
-    value?: string;
-    events?: {
-      submit?: (e: Event) => void;
-    };
-  }) {
-    super("div", {
-      title: "Create account",
-    });
-  }
+interface registerPageProps {
+  title: string;
+  value?: string;
+  events?: {
+    submit?: (e: Event) => void;
+  };
+}
+
+    export class RegisterPage extends Block {
+      constructor(props: registerPageProps) {
+        super("a", props);
+      }
 
   onSubmit(e: Event) {
     e.preventDefault();
@@ -111,6 +111,10 @@ export class RegisterPage extends Block {
 
     const inputPhone = document.getElementById("phone") as HTMLInputElement;
     const errorPhone = document.getElementById("phoneError") as HTMLParagraphElement;
+
+    if (e.target === inputName) {
+      checkName(inputName, errorName)
+    }
 
     if (e.target === inputEmail) {
       checkEmail(inputEmail, errorEmail);

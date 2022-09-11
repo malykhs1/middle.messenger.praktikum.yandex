@@ -12,10 +12,10 @@ class Block {
 
   public id = nanoid(6);
   protected props: any;
+  protected meta: { tagName: string; props: any; };
   public children: Record<string, Block>;
   private eventBus: () => EventBus;
   private _element: HTMLElement | null = null;
-  private _meta: { tagName: string; props: any; };
 
   /** JSDoc
    * @param {string} tagName
@@ -28,7 +28,7 @@ class Block {
 
     const { props, children } = this._getChildrenAndProps(propsWithChildren);
 
-    this._meta = {
+    this.meta = {
       tagName,
       props
     };
@@ -94,13 +94,13 @@ class Block {
     Object.values(this.children).forEach(child => child.dispatchComponentDidMount());
   }
 
-  private _componentDidUpdate(oldProps: any, newProps: any) {
-    if (this.componentDidUpdate(oldProps, newProps)) {
+  private _componentDidUpdate() {
+    if (this.componentDidUpdate()) {
       this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
   }
 
-  protected componentDidUpdate(oldProps: any, newProps: any) {
+  protected componentDidUpdate() {
     return true;
   }
 

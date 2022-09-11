@@ -30,15 +30,8 @@ export class ChangeDataProfilePage extends Block {
   }
 
   onBlur(e: Event) {
-    const errorPassword = document.getElementById(
-      "passwordError"
-    ) as HTMLElement;
     const errorEmail = document.getElementById("emailError") as HTMLParagraphElement;
-
     const inputEmail = document.getElementById("email") as HTMLInputElement;
-    const inputPassword = document.getElementById(
-      "password"
-    ) as HTMLInputElement;
 
     const inputLogin = document.getElementById("login") as HTMLInputElement;
     const errorLogin = document.getElementById("loginError") as HTMLParagraphElement;
@@ -85,15 +78,9 @@ export class ChangeDataProfilePage extends Block {
   }
 
   onFocus(e: Event) {
-    const errorPassword = document.getElementById(
-      "passwordError"
-    ) as HTMLElement;
     const errorEmail = document.getElementById("emailError") as HTMLParagraphElement;
 
     const inputEmail = document.getElementById("email") as HTMLInputElement;
-    const inputPassword = document.getElementById(
-      "password"
-    ) as HTMLParagraphElement;
 
     const inputLogin = document.getElementById("login") as HTMLInputElement;
     const errorLogin = document.getElementById("loginError") as HTMLParagraphElement;
