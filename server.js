@@ -1,14 +1,10 @@
 const express = require('express');
 
-const PORT = process.env.PORT || 3000;
-
 const app = express();
-app.use(express.static(__dirname));
+const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname  }/dist/index.html`)
-});
+app.use(express.static(`${__dirname}/dist/`));
 
 app.listen(PORT, () => {
-  console.log(`Текст в логе после запуска ${PORT}!`);
+  console.log(`Example app listening on port ${PORT}!`);
 });
