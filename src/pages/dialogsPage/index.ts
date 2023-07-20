@@ -4,7 +4,7 @@ import { authLink } from "../../components/authLinkTemplate";
 import { InputAuth } from "../../components/inputAuthTemplate";
 import DialogCard from '../../components/dialogCardTemplate';
 import DialogMessages from '../../components/dialogMessagesTemplate';
-import Popup from '../../components/PopupTemplate';
+import Popup from '../../components/popupTemplate';
 import ButtonSubmit from "../../components/buttonSubmitFormsTemplate";
 
 import ChatsController from '../../controllers/ChatController';

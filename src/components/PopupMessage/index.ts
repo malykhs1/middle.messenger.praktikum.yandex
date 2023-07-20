@@ -1,4 +1,4 @@
-import ButtonSubmit from '../../components/buttonSubmitFormsTemplate';
+import ButtonSubmit from '../buttonSubmitFormsTemplate';
 import Input from '../Input';
 import { InputAuth } from '../inputAuthTemplate';
 import template from './popupMessage.hbs';

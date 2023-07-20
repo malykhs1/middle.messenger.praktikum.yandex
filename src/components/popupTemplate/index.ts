@@ -1,6 +1,6 @@
 import Block from '../../utils/Block';
 import template from './popup.hbs';
-import PopupMessage from '../PopupMessage';
+import PopupMessage from '../popupMessage';
 
 export interface PopupProps {
     label?: string,
