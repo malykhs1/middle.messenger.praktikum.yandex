@@ -1,0 +1,42 @@
+.dialog__own-message {
+  text-align: end;
+  justify-content: flex-end;
+}
+
+.dialog__friend-message {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.dialog__own-message,
+.dialog__friend-message{
+  margin-bottom: 10px;
+  display: flex; }
+
+.dialog__friend-message-text ,
+.dialog__own-message-text {
+  box-sizing: border-box;
+  max-width: 40%;
+  border-radius: 5px;
+  padding: 20px 40px;
+  display: inline-block;
+  position: relative;
+}
+.dialog__own-message-text {
+  background: #e4edfd;
+}
+
+.dialog__friend-message-text {
+  background: red;
+}
+
+.dialog__own-message-time,
+.dialog__friend-message-time {
+  color: blue;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  position: absolute;
+  bottom: 5px;
+  right: 11px;
+}

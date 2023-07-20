@@ -1,36 +1,19 @@
-import Block from "../../utils/Block";
-import template from "./profile.hbs";
-import { ItemProfile } from "../../components/profileDataItemsTemplate";
+import Block from '../../utils/Block';
+import template from './profilePage.hbs';
+import Profile from '../../components/profileTemplate';
 
-export class ProfilePage extends Block {
-  init() {
-    this.children.mailInput = new ItemProfile({
-      labelProfile: "Mail",
-      dataProfile: "ma@yandex.ru",
-    });
-    this.children.loginInput = new ItemProfile({
-      labelProfile: "Login",
-      dataProfile: "ma@yandex.ru",
-    });
-    this.children.nameInput = new ItemProfile({
-      labelProfile: "Name",
-      dataProfile: "ma@yandex.ru",
-    });
-    this.children.surnameInput = new ItemProfile({
-      labelProfile: "Surname",
-      dataProfile: "ma@yandex.ru",
-    });
-    this.children.nicknameInput = new ItemProfile({
-      labelProfile: "Nickname",
-      dataProfile: "ma@yandex.ru",
-    });
-    this.children.phoneInput = new ItemProfile({
-      labelProfile: "Phone number",
-      dataProfile: "ma@yandex.ru",
-    });
-  }
+export default class ProfilePage extends Block {
+    constructor() {
+        super({});
+    }
 
-  render() {
-    return this.compile(template, this.props);
-  }
+    init() {
+        this.children.profile = new Profile({
+            changeData: true,
+        });
+    }
+
+    render() {
+        return this.compile(template, {});
+    }
 }
