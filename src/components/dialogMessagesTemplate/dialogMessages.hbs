@@ -1,0 +1,17 @@
+{{#if isMine}}
+<div class="dialog__own-message ">
+    <p class="dialog__own-message-text">{{content}}
+        <span class="dialog__own-message-time">
+            <img src="{{checkedMessage}}" alt="Read message">
+            {{time}}</span>
+    </p>
+
+</div>
+{{else}}
+<div class="dialog__friend-message">
+    <p class="dialog__friend-message-text">{{content}}
+        <span class="dialog__friend-message-time">{{time}}</span>
+        </sp>
+    <span class="{{style.dialogMessages__other__time}}"></span>
+</div>
+{{/if}}

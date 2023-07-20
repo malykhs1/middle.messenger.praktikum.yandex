@@ -1,7 +1,8 @@
 $color-input: black;
 $color-input__title: #999999;
 
-.login__input {
+.input {
+  background: none;
   font-family: "Inter";
   border: 0;
   border-bottom: 1px solid #3369f3;
@@ -15,6 +16,7 @@ $color-input__title: #999999;
   width: 358px;
   padding-bottom: 7px;
   outline-style: none;
+  margin-bottom: 20px;
   &_error {
     border-bottom: 1px solid red;
   }

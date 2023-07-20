@@ -1,0 +1,53 @@
+<main>
+    <div class="dialogs__container">
+        <div class="dialogs__container-left">
+            <div class="dialogs__profile-link-wrapper">
+            {{{profileLink}}}
+            </div>
+            <div class="dialogs__profile-info">
+                <div class="dialogs__profile-info-text-container">
+                    <p class="dialogs__profile-info-user-id">
+                        {{userId}}
+                    </p>
+                    {{{createChatButton}}}
+                </div>
+            </div>
+
+            <div class="dialogs__dialog-card-container">
+                {{#each dialogsCards}}
+                {{{this}}}
+                {{/each}}
+            </div>
+        </div>
+
+            <div class="dialogs__container-right">
+                <div class="dialogs__container-right-dialog-content">
+                    {{#each dialogMessages}}
+                    {{{this}}}
+                    {{/each}}
+                </div>
+
+                <form class="dialogs__container-right-send-message-wrapper">
+                    {{{sendMessageInput}}}
+                    {{{sendButton}}}
+                </form>
+            </div>
+        </div>
+
+        {{#if createChatPopupVisible}}
+        {{{confirmPopup}}}
+        {{/if}}
+
+        {{#if addUserInChatPopupVisible}}
+        {{{confirmPopup}}}
+        {{/if}}
+
+        {{#if deleteChatPopupVisible}}
+        {{{confirmPopup}}}
+        {{/if}}
+
+        {{#if deleteUserFromChatPopupVisible}}
+        {{{confirmPopup}}}
+        {{/if}}
+    </div>
+</main>

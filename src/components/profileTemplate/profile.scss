@@ -1,0 +1,146 @@
+$color-link: #3369f3;
+$color-input-data: #999999;
+$color-button-exit: #ee3465;
+$avatar-background-color: #efefef;
+
+.profile__container {
+    height: 100vh;
+    display: flex;
+}
+
+.profile__go-back-button {
+    height: 100%;
+    width: 64px;
+    background: #fbfbfb;
+    border-right: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.profile__user-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    padding: 0 320px;
+    display: flex;
+}
+
+.profile__image-container {
+    height: 130px;
+    width: 130px;
+    margin-top: 60px;
+    margin-bottom: 21px;
+    position: relative;
+}
+
+.profile__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile__image-container-hover {
+visibility: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    cursor: pointer;
+    background: #000;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile__image-container-hover:hover {
+    visibility: visible;
+}
+
+.profile__image-file-input {
+    visibility: hidden;
+}
+
+.profile__image-file-input input[type="file"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    height: 46px;
+
+    z-index: 5;
+    opacity: 0;
+
+    display: block;
+}
+
+.profile__image-file-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 46px;
+    background: #1F81B9;
+    border-radius: 10px;
+    color: var(--white);
+    text-decoration: none;
+    outline: none;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 22px;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__image-container:hover .profile__image-container-hover {
+    visibility: visible;
+}
+.profile__image-container:hover .profile__image-file-input {
+    visibility: visible;
+}
+
+.profile__user-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile__chat-data-container {
+    max-width: 358px;
+    margin: 30px auto 0 30px
+}
+
+.profile__change-data-link {
+    letter-spacing: 0;
+    background: no-repeat;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    padding: 0 0 10px;
+    margin-top: 10px;
+    border: 0;
+    text-decoration: none;
+    color: $color-link;
+    border-bottom: 1px solid #aaa3;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    &:nth-child(3) {
+        border-bottom: none;
+    }
+}
