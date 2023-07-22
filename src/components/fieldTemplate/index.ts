@@ -1,6 +1,5 @@
 import Block from '../../utils/Block';
 import template from './field.hbs';
-import * as style from './field.scss';
 
 interface FieldProps {
     text: string,
@@ -15,6 +14,6 @@ export default class Field extends Block {
     }
 
     render() {
-        return this.compile(template, { ...this.props, style });
+        return this.compile(template, { ...this.props });
     }
 }

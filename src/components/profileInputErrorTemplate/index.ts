@@ -7,7 +7,7 @@ interface inputProfileErrorProps {
 
 export class inputProfileError extends Block {
   constructor(props: inputProfileErrorProps) {
-    super('p', props);
+    super(props);
   }
 
   render() {
