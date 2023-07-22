@@ -2,6 +2,7 @@ import Block from "../../utils/Block";
 import template from "./inputAuth.hbs";
 
 interface inputAuthProps {
+  class?: string,
   value: string;
   type: string,
   name: string,

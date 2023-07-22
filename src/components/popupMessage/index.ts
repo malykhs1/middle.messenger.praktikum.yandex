@@ -49,6 +49,7 @@ export default class PopupMessage extends SubmitPage {
         });
 
         this.children.popupInput = new InputAuth({
+           class: "input_popup",
             value: '',
             type: 'text',
             name: 'popupInput',
