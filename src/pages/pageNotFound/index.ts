@@ -1,15 +1,17 @@
-// eslint-disable-next-line import/no-unresolved, import/extensions
 import Block from '../../utils/Block';
 import template from './pageNotFound.hbs';
-import { ErrorMessage }  from "../../components/ErrorMessageTemplate";
+import Router from "../../utils/Router";
+import ErrorMessage from "../../components/ErrorMessageTemplate";
 
 
 
 
 export default class PageNotFound extends Block {
+  router: Router;
 
   constructor() {
-    super({ });
+    super({});
+    this.router = new Router("#app");
   }
 
   init() {
