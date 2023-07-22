@@ -1,5 +1,4 @@
 import ButtonSubmit from '../buttonSubmitFormsTemplate';
-import Input from '../Input';
 import { InputAuth } from '../inputAuthTemplate';
 import template from './popupMessage.hbs';
 import ChatsController from '../../controllers/ChatController'
@@ -18,11 +17,11 @@ export default class PopupMessage extends SubmitPage {
     constructor(props: PopupMesageProps) {
         super(() => {
             if (store.getState().createChatPopupVisible) {
-                ChatsController.create((this.children.popupInput as Input).getValue());
+                ChatsController.create((this.children.popupInput as InputAuth).getValue());
                 store.set('createChatPopupVisible', false);
                }
             if (store.getState().addUserInChatPopupVisible) {
-                ChatsController.addUserToChat(store.getState().selectedChatId, Number((this.children.popupInput as Input).getValue()));
+                ChatsController.addUserToChat(store.getState().selectedChatId, Number((this.children.popupInput as InputAuth).getValue()));
                 store.set('addUserInChatPopupVisible', false);
             }
 
@@ -32,7 +31,7 @@ export default class PopupMessage extends SubmitPage {
             }
 
             if (store.getState().deleteUserFromChatPopupVisible) {
-                ChatsController.deleteUsers([Number((this.children.popupInput as Input).getValue())], store.getState().selectedChatId);
+                ChatsController.deleteUsers([Number((this.children.popupInput as InputAuth).getValue())], store.getState().selectedChatId);
                 store.set('deleteUserFromChatPopupVisible', false);
             }
 
