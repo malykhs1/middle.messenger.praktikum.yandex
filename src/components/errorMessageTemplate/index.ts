@@ -6,12 +6,12 @@ interface ErrorPageProps {
   errorText: string;
 }
 
-export class ErrorMessage extends Block {
+export default class ErrorMessage extends Block {
   constructor(props: ErrorPageProps) {
     super(props);
   }
 
   render() {
-    return this.compile(template, { ...this.props });
+    return this.compile(template, this.props);
   }
 }
