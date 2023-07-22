@@ -16,11 +16,11 @@ export class AuthController {
         try {
             await this.api.signin(data);
 
-            this.router.go('/settings');
+            this.router.go('/profile');
         } catch (e: any) {
             console.error(e);
             if (e.reason === "User already in system") {
-                this.router.go('/settings');
+                this.router.go('/profile');
             }
         }
     }
@@ -29,7 +29,7 @@ export class AuthController {
         try {
             await this.api.signup(data);
 
-            this.router.go('/settings');
+            this.router.go('/profile');
         } catch (e: any) {
             console.error(e);
         }
@@ -38,7 +38,7 @@ export class AuthController {
     async fetchUser() {
         const user = await this.api.read();
 
-        store.set('user', user);    
+        store.set('user', user);
     }
 
     async logout() {

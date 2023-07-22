@@ -23,7 +23,7 @@ export class UsersController {
         try {
             await this.api.changePassword(data);
 
-            this.router.go('/profileTemplate');
+            this.router.go('/profile');
         } catch (e: any) {
             console.error(e);
         }
