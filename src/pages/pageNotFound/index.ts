@@ -1,7 +1,7 @@
 import Block from '../../utils/Block';
 import template from './pageNotFound.hbs';
 import Router from "../../utils/Router";
-import ErrorMessage from "../../components/ErrorMessageTemplate";
+import ErrorMessage from "../../components/errorMessageTemplate";
 
 
 
