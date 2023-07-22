@@ -43,7 +43,7 @@ export default class NavPage extends Block {
       text: 'Profile',
       events: {
         click: () => {
-          this.router.go('/settings')
+          this.router.go('/profile')
         },
       },
     });

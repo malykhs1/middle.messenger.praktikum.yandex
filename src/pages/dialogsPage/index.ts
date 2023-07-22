@@ -38,7 +38,7 @@ export default class BaseDialogsPage extends SubmitPage {
             linkClass: 'dialogs__link-to-profileTemplate',
             events: {
                 click: () => {
-                    this.router.go('/settings');
+                    this.router.go('/profile');
                 },
             },
         });
