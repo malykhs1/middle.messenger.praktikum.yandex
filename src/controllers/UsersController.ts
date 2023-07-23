@@ -32,7 +32,6 @@ export class UsersController {
     async changeAvatar(data: FormData) {
         try {
             await this.api.changeAvatar(data);
-            console.log(data);
 
 
             this.router.go('/');

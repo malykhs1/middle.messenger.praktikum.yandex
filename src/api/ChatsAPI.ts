@@ -43,7 +43,7 @@ export class ChatsAPI extends BaseAPI {
     }
 
     uploadChatAvatar(chatId: number, avatar: FormData) {
-        return this.http.put('/avatar', { chatId, avatar })
+        return this.http.put('/avatar', { chatId: chatId, avatar })
     }
 
     async getToken(id: number): Promise<string> {

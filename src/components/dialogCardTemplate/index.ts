@@ -3,10 +3,10 @@ import template from './dialogCard.hbs';
 import ChatsController from '../../controllers/ChatController';
 import ButtonWithImage from '../ButtonWithImageTemplate';
 import { User } from '../../api/AuthAPI';
-import store from '../../utils/Store'
-import addUserInChatIcon from '../../../static/img/dialogsPage/addUserInChat.svg'
-import deleteUserFromChatIcon from '../../../static/img/dialogsPage/deleteUserFromChat.svg'
-import deleteChatIcon from '../../../static/img/dialogsPage/deleteChat.svg'
+import store from '../../utils/Store';
+import addUserInChatIcon from '../../../static/img/dialogsPage/addUserInChat.svg';
+import deleteUserFromChatIcon from '../../../static/img/dialogsPage/deleteUserFromChat.svg';
+import deleteChatIcon from '../../../static/img/dialogsPage/deleteChat.svg';
 
 export interface DialogCardProps {
     id: number;

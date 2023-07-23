@@ -91,6 +91,7 @@ class ProfileBase extends SubmitPage {
                     let file = e.target.files[0];
                     let formData = new FormData();
                     formData.append("avatar", file);
+                    console.log(formData)
                     UsersController.changeAvatar(formData);
                 },
             },
