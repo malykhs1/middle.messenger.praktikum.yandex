@@ -1,0 +1,34 @@
+$list-color: #3369f3;
+
+
+.navigation__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+
+  a {
+    color: $list-color;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    height: 11px;
+    line-height: 11px;
+    margin-bottom: 40px;
+  }
+
+
+  ul {
+    list-style-type: none;
+
+    li {
+      color: $list-color;
+      cursor: pointer;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

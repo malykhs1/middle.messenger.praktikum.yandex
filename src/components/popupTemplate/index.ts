@@ -1,17 +1,33 @@
-import Block from "../../utils/Block";
-import template from "./popup.hbs";
+import Block from '../../utils/Block';
+import template from './popup.hbs';
+import PopupMessage from '../popupMessage';
 
-interface popupFileProps {
-  popupTitle: string;
-  popupMessage: string;
+export interface PopupProps {
+    label?: string,
+    placeholder?: string,
+    buttonText?: string,
+    empty? : boolean,
+    events: {
+        click: () => void,
+    }
 }
 
-export class PopupFile extends Block {
-  constructor(props: popupFileProps) {
-    super("p", props);
-  }
+export default class Popup extends Block {
+    constructor(props: PopupProps) {
+        super(props);
+    }
 
-  render() {
-    return this.compile(template, this.props);
-  }
+
+    init() {
+        this.children.popupMessage = new PopupMessage({
+            label: this.props?.label,
+            placeholder: this.props?.placeholder,
+            buttonText: this.props?.buttonText,
+            empty: this.props?.empty,
+        });
+    }
+
+    render() {
+        return this.compile(template, { ...this.props });
+    }
 }

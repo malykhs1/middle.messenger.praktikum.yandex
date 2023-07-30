@@ -1,12 +1,15 @@
-<div class="login__input__area">
-  <p class="login__input-title">{{title}}</p>
+<div class="input__area" {{#if hide}} style="display: none;"{{/if}}>
   <input
-    class="login__input"
-    id="{{id}}"
+    class="input {{class}}"
+    id="{{name}}"
     name="{{name}}"
     placeholder="{{placeholder}}"
     type="{{type}}"
     value="{{value}}"
+      {{#if disabled }} disabled {{/if}}
   />
-  <p class="login__input_error-text" id={{idError}}></p>
+{{#if validationError}}
+        <p class="input_error-text">{{validationErrorMessage}}</p>
+{{/if}}
 </div>
+

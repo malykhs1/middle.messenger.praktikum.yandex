@@ -4,12 +4,11 @@ import template from "./errorMessage.hbs";
 interface ErrorPageProps {
   errorNumber: string;
   errorText: string;
-  navText: string;
 }
 
-export class ErrorMessage extends Block {
+export default class ErrorMessage extends Block {
   constructor(props: ErrorPageProps) {
-    super("div", props);
+    super(props);
   }
 
   render() {

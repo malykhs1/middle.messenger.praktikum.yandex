@@ -8,7 +8,7 @@ interface inputProfileProps {
 
 export class ItemProfile extends Block {
   constructor(props: inputProfileProps) {
-    super("input", props);
+    super(props);
   }
 
   render() {

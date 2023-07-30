@@ -11,7 +11,7 @@ type Options = {
 };
 
 function queryStringify(data = {}) {
-  return Object.entries(data).map(([key, value]) => `${key}=${value}`).join('&');
+  return Object.entries(data).map(([key, value]) => `${key}=${JSON.stringify(value)}`).join('&');
 }
 
 class HTTPTransport {
