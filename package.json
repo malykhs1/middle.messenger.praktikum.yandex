@@ -8,7 +8,7 @@
     "nanoid": "3.0.0",
     "parcel": "2.7.0",
     "rimraf": "3.0.2",
-    "typescipt": "^1.0.0"
+    "typescript": "5.0.2"
   },
   "scripts": {
     "dev": "rimraf .parcel-cache/* && parcel src/index.html --no-cache --open --port 3000",
