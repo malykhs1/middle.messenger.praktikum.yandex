@@ -61,12 +61,17 @@ export class InputAuth extends Block <inputAuthProps> {
   public _removeEvents() {
     const { events = {} } = this.props;
 
-    if (events !== null && events !== undefined) {
-      Object.keys(events).forEach((eventName) => {
-        ((this.element as HTMLInputElement)?.getElementsByTagName('input')[0]).removeEventListener(eventName, events[eventName as keyof typeof events]);
-      });
+    if (events !== null && events !== undefined ) {
+      const inputElement = (this.element as HTMLInputElement)?.getElementsByTagName('input')[0];
+
+      if (inputElement) {
+        Object.keys(events).forEach((eventName) => {
+          inputElement.removeEventListener(eventName, events[eventName as keyof typeof events]);
+        });
+      }
     }
   }
+
 
   render() {
     return this.compile(template, { ...this.props });

@@ -116,6 +116,7 @@ class Block<P extends Record<string, any> = any> {
     }
   }
 
+  //@ts-ignore
   protected componentDidUpdate(oldProps: P, newProps: P) {
     return true;
   }
