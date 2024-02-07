@@ -5,6 +5,7 @@ import Router from '../../utils/Router';
 
 export default class NavPage extends Block {
   router: Router;
+  isAuthenticated: boolean;
 
   constructor() {
     super({});
@@ -12,29 +13,22 @@ export default class NavPage extends Block {
   }
 
   init() {
-    this.children.signInLink = new Li({
-      text: 'Login',
-      events: {
-        click: () => {
-          this.router.go('/sign-in')
-        },
-      },
-    });
+    this.isAuthenticated = this.checkAuthentication(); // Проверяем аутентификацию в методе init()
+    // Отображаем разные ссылки в зависимости от состояния авторизации
+    if (this.isAuthenticated) {
+      this.renderAuthenticatedLinks();
+    } else {
+      this.renderUnauthenticatedLinks();
+    }
+  }
 
-    this.children.signUpLink = new Li({
-      text: 'Register',
-      events: {
-        click: () => {
-          this.router.go('/sign-up')
-        },
-      },
-    });
-
+  renderAuthenticatedLinks() {
+    // Выводим ссылки для авторизованного пользователя
     this.children.dialogsLink = new Li({
       text: 'Dialogs',
       events: {
         click: () => {
-          this.router.go('/messenger')
+          this.router.go('/messenger');
         },
       },
     });
@@ -43,23 +37,41 @@ export default class NavPage extends Block {
       text: 'Profile',
       events: {
         click: () => {
-          this.router.go('/profile')
+          this.router.go('/profile');
+        },
+      },
+    });
+  }
+
+  renderUnauthenticatedLinks() {
+    // Выводим ссылки для неавторизованного пользователя
+    this.children.signInLink = new Li({
+      text: 'Login',
+      events: {
+        click: () => {
+          this.router.go('/sign-in');
         },
       },
     });
 
-    this.children.pageNotFound = new Li({
-      text: '404',
+    this.children.signUpLink = new Li({
+      text: 'Register',
       events: {
         click: () => {
-          this.router.go('/404')
+          this.router.go('/sign-up');
         },
       },
     });
+  }
+
+  // Метод для проверки состояния авторизации пользователя
+  checkAuthentication() {
+    const isAuth = localStorage.getItem('isAuth');
+    console.log(isAuth)
+    return isAuth === 'true';
   }
 
   render() {
     return this.compile(template, {});
   }
 }
-
